@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: iww17xgau-go-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/iww17xgau-go-gitops

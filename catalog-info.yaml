@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: iww17xgau-go-gitops
+  description: This is GitOps manifest for iww17xgau-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=iww17xgau-go
+    backstage.io/kubernetes-id: iww17xgau-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: iww17xgau-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:iww17xgau-go
